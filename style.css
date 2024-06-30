@@ -1,8 +1,7 @@
-
 body {
   font-family: 'PT Sans', sans-serif; 
   margin: 100px;
-  
+  padding-top: 80px;
 }
 
 .main-title {
@@ -15,6 +14,7 @@ body {
   color: black;
   display: inline-flex;
   align-items: baseline; 
+  text-align: center;
 }
 
 .chapter {
@@ -22,12 +22,11 @@ body {
   font-size: 14px; 
   font-weight: 300;
   line-height: 30px;
-  letter-spacing: 1 px;
+  letter-spacing: 1px;
   color: grey;
   position: relative;
   top: -23px; 
   margin-left: 4px;
-  
 }
 
 .text {
@@ -47,7 +46,6 @@ u {
   text-decoration: underline;
 }
 
-
 .highlight {
   font-family: 'PT Sans', sans-serif;
   font-size: 28px;
@@ -61,7 +59,6 @@ u {
   background-color: #cdc3c3; 
   font-family: Arial, sans-serif; 
   font-size: 28px; 
-  
 }
 
 .header {
@@ -70,17 +67,86 @@ u {
   align-items: center;
   padding: 20px;
   background-color: #ffffff;
-  margin-bottom: 50px;
+  position: fixed; 
+  top: 0; 
+  left: 0; 
+  right: 20px;
+  width: 100%; 
+  z-index: 1000; 
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-.header .left-menu span {
+.header .left-menu span:first-child {
+  margin-left: 103px;
   margin-right: 40px;
   font-weight: bold; 
   color: black; 
 }
 
-.header .right-menu span {
+.header .left-menu .eng {
+  font-family: 'Tourney', sans-serif;
+  
+}
+
+.header .right-menu img {
   margin-right: 100px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.pattern-container {
+  position: fixed;
+  top: 260px; 
+  left: calc(100% - 812px); 
+  width: 800px;
+  height: 800px; 
+  z-index: -1;
+  transform: translateX(250px); 
+}
+
+.pattern-container img {
+  width: 60%;
+  height: 60%;
+  object-fit: cover;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  background-color: rgba(300, 300, 300, 0.3); 
+  padding: 20px;
+  margin-left: 280px;
+ 
+  
+
+}
+
+.title-divider {
+  width: 10%; 
+  height: auto;
+}
+
+.side-menu {
+  position: -webkit-sticky; /* Для поддержки Safari */
+  position: sticky;
+  top: 150px; /* Расстояние от верха экрана */
+  left: 120px; /* Смещение от левого края */
+  width: 385px; /* Ширина side-menu */
+  height: 462px; /* Высота side-menu */
+  padding: 10px 0 0 0; /* Внутренние отступы */
+  background-color: rgba(255, 255, 255, 0); /* Полупрозрачный фон для улучшения читаемости текста */
+  z-index: 2;
+  gap: 70px; /* Разрыв между элементами */
+}
+
+.side-menu .menu-item {
+  font-family: 'Francois One', sans-serif;
+  font-size: 24px;
   font-weight: bold; 
-  color: black; 
+  margin-bottom: 40px;
+  border-bottom: 1px solid #b7b3b3;
+  padding-bottom: 10px;
+  width: 230px;
 }
