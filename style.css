@@ -1,7 +1,8 @@
 body {
   font-family: 'PT Sans', sans-serif; 
-  margin: 100px;
+  margin: 0;
   padding-top: 80px;
+  overflow-x: hidden;
 }
 
 .main-title {
@@ -12,9 +13,8 @@ body {
   letter-spacing: 0.04em;
   text-align: left;
   color: black;
-  display: inline-flex;
-  align-items: baseline; 
-  text-align: center;
+  display: block;
+  margin-top: 10px; /* Добавлен отступ сверху */
 }
 
 .chapter {
@@ -70,7 +70,7 @@ u {
   position: fixed; 
   top: 0; 
   left: 0; 
-  right: 20px;
+  right: 0;
   width: 100%; 
   z-index: 1000; 
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
@@ -85,11 +85,42 @@ u {
 
 .header .left-menu .eng {
   font-family: 'Tourney', sans-serif;
-  
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 18px;
+  letter-spacing: 0.06em;
+  text-align: center;
+  margin-left: 100px;
+}
+
+.header .right-menu a {
+  display: inline-block;
+  margin-right: 100px;
 }
 
 .header .right-menu img {
-  margin-right: 100px;
+  display: block;
+}
+
+.header .left-menu {
+  display: flex;
+  align-items: center;
+}
+
+.header .left-menu a {
+  font-weight: bold; 
+  color: black; 
+  text-decoration: none; 
+  margin-right: 20px; 
+}
+
+.doc-link {
+  font-family: 'Staatliches', sans-serif;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 27.5px;
+  letter-spacing: 0.03em;
+  text-align: left;
 }
 
 * {
@@ -112,30 +143,37 @@ u {
   object-fit: cover;
 }
 
+.content-wrapper {
+  display: flex;
+  margin-top: 150px; /* Ensure content starts below the header */
+}
+
 .content {
-  position: relative;
-  z-index: 1;
-  background-color: rgba(300, 300, 300, 0.3); 
-  padding: 20px;
-  margin-left: 280px;
+  width: 785px;
+  height: 2931px;
+  position: absolute;
+  top: 150px;
+  left: 535px;
+  padding: 0 0 90px 0;
+  gap: 70px;
 }
 
 .title-divider {
   width: 10%; 
   height: auto;
+  margin-bottom: 10px; /* Добавлен отступ снизу */
 }
 
 .side-menu {
-  position: -webkit-sticky; /* Для поддержки Safari */
-  position: sticky;
-  top: 150px; /* Расстояние от верха экрана */
-  left: 120px; /* Смещение от левого края */
-  width: 385px; /* Ширина side-menu */
-  height: 462px; /* Высота side-menu */
-  padding: 10px 0 0 0; /* Внутренние отступы */
-  background-color: rgba(255, 255, 255, 0); /* Полупрозрачный фон для улучшения читаемости текста */
+  width: 385px;
+  height: 462px;
+  position: absolute;
+  top: 150px;
+  left: 120px;
+  padding: 10px 0 0 0; 
+  background-color: rgba(255, 255, 255, 0); 
   z-index: 2;
-  gap: 70px; /* Разрыв между элементами */
+  gap: 70px;
 }
 
 .side-menu .menu-item {
@@ -146,4 +184,7 @@ u {
   border-bottom: 1px solid #b7b3b3;
   padding-bottom: 10px;
   width: 230px;
+  display: block;
+  color: black;
+  text-decoration: none;
 }
