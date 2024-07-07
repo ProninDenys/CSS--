@@ -1,0 +1,232 @@
+body {
+    font-family: 'PT Sans', sans-serif; 
+    margin: 0;
+    padding-top: 80px;
+    overflow-x: hidden;
+}
+
+
+.main-title {
+    position: relative;
+    padding-left: 120px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 36px;
+    font-weight: bold; 
+    line-height: 48px;
+    letter-spacing: 0.04em;
+    text-align: left;
+    color: black;
+    display: block;
+    margin-top: 50px;
+    font-weight: 600;
+    margin-left: 117px;
+}
+
+.main-title::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100px;
+    height: 8px;
+    background-color: black;
+}
+
+.chapter {
+    font-family: 'Farro', sans-serif;
+    font-size: 14px; 
+    font-weight: 300;
+    line-height: 30px;
+    letter-spacing: 1px;
+    color: grey;
+    position: relative;
+    top: -23px; 
+    margin-left: 4px;
+}
+
+.text {
+    font-family: 'PT Sans', sans-serif;
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 48px;
+    text-align: left;
+    margin-top: 20px;
+}
+
+i { 
+    font-style: italic;
+}
+
+u { 
+    text-decoration: underline;
+}
+
+.highlight {
+    font-family: 'PT Sans', sans-serif;
+    font-size: 28px;
+    line-height: 48px;
+    margin-top: 20px;
+    color: rgb(0, 0, 0);
+    font-weight: 800;
+}
+
+.highlighted-text {
+    background-color: #cdc3c3; 
+    font-family: Arial, sans-serif; 
+    font-size: 28px; 
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #ffffff;
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    right: 0;
+    width: 100%; 
+    z-index: 1000; 
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.header .left-menu span:first-child {
+    margin-left: 103px;
+    margin-right: 40px;
+    font-weight: bold; 
+    color: black; 
+}
+
+.header .left-menu .eng {
+    font-family: 'Tourney', sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 18px;
+    letter-spacing: 0.06em;
+    text-align: center;
+    margin-left: 100px;
+}
+
+.header .right-menu a {
+    display: inline-block;
+    margin-right: 100px;
+}
+
+.header .right-menu img {
+    display: block;
+}
+
+.header .left-menu {
+    display: flex;
+    align-items: center;
+}
+
+.header .left-menu a {
+    font-weight: bold; 
+    color: black; 
+    text-decoration: none; 
+    margin-right: 20px; 
+}
+
+.doc-link {
+    font-family: 'Staatliches', sans-serif;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 27.5px;
+    letter-spacing: 0.03em;
+    text-align: left;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.pattern-container {
+    position: fixed;
+    top: 260px; 
+    left: calc(100% - 812px); 
+    width: 800px;
+    height: 800px; 
+    z-index: -1;
+    transform: translateX(250px); 
+}
+
+.pattern-container img {
+    width: 60%;
+    height: 60%;
+    object-fit: cover;
+}
+
+
+
+
+.card-section {
+    width: 1200px;
+    height: 430px;
+    position: absolute;
+    top: 50px;
+    left: 120px;
+    padding: 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    border-width: 1px 0 1px 0;
+    border-style: solid;
+    border-color: #BFBFBF;
+    position: relative;
+}
+
+.card-section::before,
+.card-section::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background-color: #BFBFBF;
+}
+
+.card-section::before {
+    top: 0;
+}
+
+.card-section::after {
+    bottom: 0;
+}
+
+.card {
+    width: 270px;
+    height: 180px;
+    perspective: 1000px;
+}
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.card:hover .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 8px 0 0 0;
+}
+
+.card-front {
+    transform: rotateY(0deg);
+}
+
+.card-back {
+    transform: rotateY(180deg);
+}
