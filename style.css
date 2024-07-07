@@ -14,7 +14,7 @@ body {
   text-align: left;
   color: black;
   display: block;
-  margin-top: 10px; /* Добавлен отступ сверху */
+  margin-top: 10px;
 }
 
 .chapter {
@@ -145,7 +145,7 @@ u {
 
 .content-wrapper {
   display: flex;
-  margin-top: 150px; /* Ensure content starts below the header */
+  margin-top: 150px; 
 }
 
 .content {
@@ -161,7 +161,7 @@ u {
 .title-divider {
   width: 10%; 
   height: auto;
-  margin-bottom: 10px; /* Добавлен отступ снизу */
+  margin-bottom: 10px; 
 }
 
 .side-menu {
